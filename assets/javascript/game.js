@@ -10,13 +10,14 @@ $(document).ready(function () {
     console.log(userScore);
     var imagePath = ["/unit-4-game/assets/images/jewel1.jpg", "/unit-4-game/assets/images/jewel2.jpg", "/unit-4-game/assets/images/jewel3.jpg", "/unit-4-game/assets/images/jewel4.jpg"];
     // create arrays for random number generation and image array
-    var jewelValue = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
-    console.log(jewelValue);
+    // var jewelValue = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
+    // console.log(jewelValue);
 
-    for (var i = 0; i < jewelValue.length; i++) {
+    for (var i = 0; i < imagePath.length; i++) {
         var jewel = $("<img>");
         jewel.attr("class", "jewel");
-        jewel.attr("data-jewelRandomValue", jewelValue[i]);
+        jewel.attr("id", "idNum"+i);
+        jewel.attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1);
         jewel.attr("src", imagePath[i]);
         $(".images").append(jewel);
 
@@ -27,10 +28,13 @@ $(document).ready(function () {
         userScore = 0;
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
-
+        for (var i = 0; i < imagePath.length; i++) {
+            $("#idNum"+[i]).attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1);
+          // select specific image using IDs
+        //   change value to random value
+    
+        }
         
-
-        jewelValue = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
 
 
     }
