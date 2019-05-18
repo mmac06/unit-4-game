@@ -26,26 +26,18 @@ $(document).ready(function () {
 
         console.log($(this).attr("data-jewelRandomValue"));
         userScore = userScore + parseInt($(this).attr("data-jewelRandomValue"));
-        $("#userScore").html("<h1>" + userScore + "</h1>");
+        $("#userScore").html("<p>" + "User Score:" + "</br>" + "</p>" + "<h1>" + userScore + "</h1>");
 
         winCount();
 
     });
 
 
-
-    // var imageArray = ["./assets/images/jewel1.jpg", "./assets/images/jewel2.jpg", "./assets/images/jewel3.jpg", "./assets/images/jewel4.jpg"]
-    // console.log(imageArray);
-    // for (var i = 0; i < jewelValue.length; i++) {
-    //     var imageJewel = $("<img src= '" + imageArray[i] + "'data-jewel='" + jewelValue[i] +"'/img>");
-    //     $(".images").append(imageJewel);
-    // }
-
     // calculates random computer guess
     function calculateTarget() {
         targetNumber = Math.floor(Math.random() * 101) + 19;
         // show this on the page
-        $("#cpuGuess").html("<h1>" + targetNumber + "</h1>");
+        $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
     }
     // run the above function
     calculateTarget();
@@ -66,8 +58,7 @@ $(document).ready(function () {
             }
         }
     }
-    // run the above function
-    winCount();
+
 
 
 

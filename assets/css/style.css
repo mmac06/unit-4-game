@@ -36,9 +36,7 @@ p {
 
 #userScore {
     background-color: yellow;
-    /* margin-bottom: 15px; */
     text-align: center;
-    /* padding-left: 10px; */
 }
 
 .crtlPanel {
@@ -47,17 +45,16 @@ p {
 
 #cpuGuess {
     background-color: red;
-    /* margin-bottom: 15px; */
     text-align: center;
-    /* padding-right: 10px; */
 }
 
 .scoreBox {
     background-color: greenyellow;
     text-align: center;
-    /* padding-left: 10px; */
+    /* margin-bottom: 150px; */
 }
 
 .images {
     margin-bottom: 15px;
 }
+
