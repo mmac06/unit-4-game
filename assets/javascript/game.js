@@ -6,7 +6,7 @@ $(document).ready(function () {
     var losses = 0;
     console.log(losses);
     var targetNumber = 0;
-    userScore = 0;
+    var userScore = 0;
     console.log(userScore);
     var imagePath = ["/unit-4-game/assets/images/jewel1.jpg", "/unit-4-game/assets/images/jewel2.jpg", "/unit-4-game/assets/images/jewel3.jpg", "/unit-4-game/assets/images/jewel4.jpg"];
     // create arrays for random number generation and image array
@@ -19,6 +19,19 @@ $(document).ready(function () {
         jewel.attr("data-jewelRandomValue", jewelValue[i]);
         jewel.attr("src", imagePath[i]);
         $(".images").append(jewel);
+
+    }
+
+    // resets the game
+    function resetGame() {
+        userScore = 0;
+        targetNumber = Math.floor(Math.random() * 101) + 19;
+        $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
+
+        
+
+        jewelValue = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
+
 
     }
 
@@ -49,12 +62,16 @@ $(document).ready(function () {
             alert("You win! Congrats!");
             // show this on the page
             $("#wins").html("<h3>" + wins + "</h3>");
+            // resets game
+            resetGame();
         } else {
             if (userScore > targetNumber) {
                 losses++;
                 alert("You lose! YOU SUCK!");
                 // show this on the page
                 $("#losses").html("<h3>" + losses + "</h3>");
+                // resets game
+                resetGame();
             }
         }
     }
