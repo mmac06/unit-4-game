@@ -4,9 +4,9 @@ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 width: 100%;
 }
 
-.container {
+/* .container {
 
-}
+} */
 
 #headerBox {
     background-color: pink;
@@ -34,12 +34,22 @@ p {
     padding: 20px;
 }
 
-#userGuess {
-    background-color: blue;
+#userScore {
+    background-color: yellow;
+    margin-bottom: 15px;
+    text-align: center;
     /* padding-left: 10px; */
 }
 
 #cpuGuess {
     background-color: red;
+    margin-bottom: 15px;
+    text-align: center;
     /* padding-right: 10px; */
+}
+
+.scoreBox {
+    background-color: greenyellow;
+    text-align: center;
+    /* padding-left: 10px; */
 }

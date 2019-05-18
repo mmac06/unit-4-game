@@ -31,32 +31,36 @@
         </div>
         <!-- Instruction box -->
         <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8" id="instructionBox">
-                    <h3>Instructions:</h3>
-                    <p>You will be given a random number at the beginning of the game.</p>
-                    <p>There are four crystals below. By clicking on a crystal, you will add a sepcific number of points to your total score.</p>
-                    <p>You win the game by matching your total score to the random number (Hooray!!). You lose the game if your sore goes above the random number (Boo! You suck!!).</p>
-                    <p>But there's a catch! The value of each crystal is hidden from you until you click on it. Each time the game restarts, the values of the crystals will change.</p>
-                    <p>Good luck, and don't blow it!</p>
-                </div>
-                <div class="col-sm-2"></div>
-            </div>
-
-            
-    <!-- Box with random computer number -->
-    <div class="row">
             <div class="col-sm-2"></div>
-            <div class="col-sm-4" id="cpuGuess"><p>CPU Guess</p></div>
-            <div class="col-sm-4" id="userGuess"><p>User Guess</p></div>
+            <div class="col-sm-8" id="instructionBox">
+                <h3>Instructions:</h3>
+                <p>You will be given a random number at the beginning of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal, you will add a sepcific number of points to
+                    your total score.</p>
+                <p>You win the game by matching your total score to the random number (Hooray!!). You lose the game if
+                    your sore goes above the random number (Boo! You suck!!).</p>
+                <p>But there's a catch! The value of each crystal is hidden from you until you click on it. Each time
+                    the game restarts, the values of the crystals will change.</p>
+                <p>Good luck, and don't blow it!</p>
+            </div>
             <div class="col-sm-2"></div>
         </div>
 
 
-    <!-- Wins and losses box -->
+        <!-- Boxes with random computer number and user score -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 guess" id="cpuGuess">
+                <p>CPU Guess</p>
+            </div>
+            <div class="col-sm-4 guess" id="userScore">
+                <p>User Score</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
 
-    <!-- Jewels images -->
-    <div class="row">
+        <!-- Jewels images -->
+        <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-2 jewel" id="jewel1"></div>
             <div class="col-sm-2 jewel" id="jewel2"></div>
@@ -65,22 +69,24 @@
             <div class="col-sm-2"></div>
         </div>
 
-    <!-- Your score box -->
-
-
-
-
+        <!-- Wins and losses box -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 scoreBox" id="wins">
+                <p>Wins</p>
+            </div>
+            <div class="col-sm-4 scoreBox" id="losses">
+                <p>Losses</p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
 
     </div>
 
 
 
-    
-    
-    
-    
-    
-    <script src="/unit-4-game/assets/javascript/game.js"></script> 
+
+    <script src="/unit-4-game/assets/javascript/game.js"></script>
 </body>
 
 </html>
