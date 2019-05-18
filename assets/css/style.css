@@ -1,4 +1,45 @@
 body {
 background-image: url(/unit-4-game/assets/images/Funky-Background.jpg);
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 width: 100%;
+}
+
+.container {
+
+}
+
+#headerBox {
+    background-color: pink;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+}
+
+h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+#instructionBox {
+    background-color: aquamarine;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#userGuess {
+    background-color: blue;
+    /* padding-left: 10px; */
+}
+
+#cpuGuess {
+    background-color: red;
+    /* padding-right: 10px; */
 }
