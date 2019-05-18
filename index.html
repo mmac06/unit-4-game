@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mike's Awesome Game</title>
 
+    <!-- added reset -->
+    <link rel="stylesheet" href="/unit-4-game/assets/css/reset.css">
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/unit-4-game/assets/css/reset.css">
+
     <link rel="stylesheet" href="/unit-4-game/assets/css/style.css">
 
 </head>
@@ -48,10 +50,10 @@
         <div class="row crtlPanel">
             <div class="col-sm-2"></div>
             <div class="col-sm-2 btn btn-primary" id="resetButton">
-                <p>Reset Button</p>
+                <span class="align-middle">Reset Button</span>
             </div>
             <div class="col-sm-3 guess" id="cpuGuess">
-                <p>Number to Guess</p>
+                <!-- <p>Number to Guess</p> -->
             </div>
             <div class="col-sm-3 guess" id="userScore">
                 <p>User Score</p>
@@ -73,10 +75,10 @@
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-4 scoreBox" id="wins">
-                <p>Wins</p>
+                <h3>Wins:</h3>
             </div>
             <div class="col-sm-4 scoreBox" id="losses">
-                <p>Losses</p>
+                <h3>Losses:</h3>
             </div>
             <div class="col-sm-2"></div>
         </div>
