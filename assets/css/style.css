@@ -36,14 +36,18 @@ p {
 
 #userScore {
     background-color: yellow;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     text-align: center;
     /* padding-left: 10px; */
 }
 
+.crtlPanel {
+    margin-bottom: 15px;
+}
+
 #cpuGuess {
     background-color: red;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     text-align: center;
     /* padding-right: 10px; */
 }
