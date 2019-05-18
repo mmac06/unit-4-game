@@ -8,32 +8,63 @@ $(document).ready(function () {
     var targetNumber = 0;
     userScore = 0;
     console.log(userScore);
-
+    var imagePath = ["/unit-4-game/assets/images/jewel1.jpg", "/unit-4-game/assets/images/jewel2.jpg", "/unit-4-game/assets/images/jewel3.jpg", "/unit-4-game/assets/images/jewel4.jpg"];
     // create arrays for random number generation and image array
     var jewelValue = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
     console.log(jewelValue);
-    var imageArray = ["./assets/images/jewel1.jpg", "./assets/images/jewel2.jpg", "./assets/images/jewel3.jpg", "./assets/images/jewel4.jpg"]
-    console.log(imageArray);
- 
+
+    for (var i = 0; i < jewelValue.length; i++) {
+        var jewel = $("<img>");
+        jewel.attr("class", "jewel");
+        jewel.attr("data-jewelRandomValue", jewelValue[i]);
+        jewel.attr("src", imagePath[i]);
+        $(".images").append(jewel);
+
+    }
+
+    $(".jewel").on("click", function () {
+
+        console.log($(this).attr("data-jewelRandomValue"));
+        userScore = userScore + parseInt($(this).attr("data-jewelRandomValue"));
+        $("#userScore").html("<h1>" + userScore + "</h1>");
+
+        winCount();
+
+    });
+
+
+
+    // var imageArray = ["./assets/images/jewel1.jpg", "./assets/images/jewel2.jpg", "./assets/images/jewel3.jpg", "./assets/images/jewel4.jpg"]
+    // console.log(imageArray);
+    // for (var i = 0; i < jewelValue.length; i++) {
+    //     var imageJewel = $("<img src= '" + imageArray[i] + "'data-jewel='" + jewelValue[i] +"'/img>");
+    //     $(".images").append(imageJewel);
+    // }
+
     // calculates random computer guess
     function calculateTarget() {
         targetNumber = Math.floor(Math.random() * 101) + 19;
         // show this on the page
-        $("#cpuGuess").html("<h1>" + targetNumber + "</h1>"); 
+        $("#cpuGuess").html("<h1>" + targetNumber + "</h1>");
     }
     // run the above function
     calculateTarget();
 
-    // tabulates wins
-    function winCount () {
+    // tabulates wins and losses
+    function winCount() {
         if (userScore === targetNumber) {
-        wins++;
-        alert("You win! Congrats!");
-        // show this on the page
-        $("#wins").html("<h3>" + "Wins:" + "<br>" + wins + "</h3>");
+            wins++;
+            alert("You win! Congrats!");
+            // show this on the page
+            $("#wins").html("<h3>" + wins + "</h3>");
         } else {
-            wins = "";
-        } 
+            if (userScore > targetNumber) {
+                losses++;
+                alert("You lose! YOU SUCK!");
+                // show this on the page
+                $("#losses").html("<h3>" + losses + "</h3>");
+            }
+        }
     }
     // run the above function
     winCount();

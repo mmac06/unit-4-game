@@ -56,7 +56,7 @@
                 <!-- <p>Number to Guess</p> -->
             </div>
             <div class="col-sm-3 guess" id="userScore">
-                <p>User Score</p>
+                <p id="score">User Score</p>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -64,21 +64,43 @@
         <!-- Jewels images -->
         <div class="row">
             <div class="col-sm-2"></div>
-            <div class="col-sm-2 jewel" id="jewel1"></div>
+            <div class="col-sm-8 images"></div>
+
+            <!-- <img src="/unit-4-game/assets/images/jewel1.jpg" class="col-sm-2 jewel" id="jewel1"></img>
+            <img src="/unit-4-game/assets/images/jewel2.jpg" class="col-sm-2 jewel" id="jewel2"></img>
+            <img src="/unit-4-game/assets/images/jewel3.jpg" class="col-sm-2 jewel" id="jewel3"></img>
+            <img src="/unit-4-game/assets/images/jewel4.jpg" class="col-sm-2 jewel" id="jewel4"></img> -->
+            <!-- <div class="col-sm-2 jewel" id="jewel1"></div>
             <div class="col-sm-2 jewel" id="jewel2"></div>
             <div class="col-sm-2 jewel" id="jewel3"></div>
-            <div class="col-sm-2 jewel" id="jewel4"></div>
+            <div class="col-sm-2 jewel" id="jewel4"></div> -->
+
+
+
             <div class="col-sm-2"></div>
         </div>
 
         <!-- Wins and losses box -->
         <div class="row">
             <div class="col-sm-2"></div>
-            <div class="col-sm-4 scoreBox" id="wins">
+            <div class="col-sm-4 scoreBox">
                 <h3>Wins:</h3>
             </div>
-            <div class="col-sm-4 scoreBox" id="losses">
+            <div class="col-sm-4 scoreBox">
                 <h3>Losses:</h3>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 scoreBox" id="wins">
+                <h3>0</h3>
+            </div>
+            <div class="col-sm-4 scoreBox" id="losses">
+                <h3>0</h3>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -88,7 +110,7 @@
 
 
 
-     <!-- Added link to the jQuery Library/ Javascript -->
+    <!-- Added link to the jQuery Library/ Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/unit-4-game/assets/javascript/game.js"></script>
 </body>
