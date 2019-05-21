@@ -25,7 +25,8 @@ $(document).ready(function () {
 
     // resets the game
     function resetGame() {
-        $("#userScore").html("<p>" + "User Score:" + "</br>" + "</p>" + "<h1>" + 0 + "</h1>");
+        // $("#userScore").html("<p>" + "User Score:" + "</br>" + "</p>" + "<h1>" + 0 + "</h1>");
+        userScore = 0;
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
         for (var i = 0; i < imagePath.length; i++) {
