@@ -29,14 +29,9 @@ $(document).ready(function () {
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
         for (var i = 0; i < imagePath.length; i++) {
-            $("#idNum"+[i]).attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1);
-          // select specific image using IDs
-        //   change value to random value
-    
+            $("#idNum"+[i]).attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1); 
         }
         
-
-
     }
 
     $(".jewel").on("click", function () {

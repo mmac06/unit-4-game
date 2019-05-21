@@ -56,5 +56,8 @@ p {
 
 .images {
     margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 100%; */
 }
 
