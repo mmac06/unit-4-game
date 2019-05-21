@@ -16,7 +16,7 @@ $(document).ready(function () {
     for (var i = 0; i < imagePath.length; i++) {
         var jewel = $("<img>");
         jewel.attr("class", "jewel");
-        jewel.attr("id", "idNum"+i);
+        jewel.attr("id", "idNum" + i);
         jewel.attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1);
         jewel.attr("src", imagePath[i]);
         $(".images").append(jewel);
@@ -25,21 +25,23 @@ $(document).ready(function () {
 
     // resets the game
     function resetGame() {
-        userScore = 0;
+        $("#userScore").html("<p>" + "User Score:" + "</br>" + "</p>" + "<h1>" + 0 + "</h1>");
         targetNumber = Math.floor(Math.random() * 101) + 19;
         $("#cpuGuess").html("<p>" + "Number to Guess:" + "</br>" + "<h1>" + targetNumber + "</h1>");
         for (var i = 0; i < imagePath.length; i++) {
-            $("#idNum"+[i]).attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1); 
+            $("#idNum" + [i]).attr("data-jewelRandomValue", Math.floor(Math.random() * 11) + 1);
         }
-        
     }
 
-    $(".jewel").on("click", function () {
+    $("#resetButton").on("click", function () {
+        resetGame();
 
+    });
+
+    $(".jewel").on("click", function () {
         console.log($(this).attr("data-jewelRandomValue"));
         userScore = userScore + parseInt($(this).attr("data-jewelRandomValue"));
         $("#userScore").html("<p>" + "User Score:" + "</br>" + "</p>" + "<h1>" + userScore + "</h1>");
-
         winCount();
 
     });
